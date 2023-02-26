@@ -1,0 +1,116 @@
+.usersWrapper {
+    width: 100%;
+    .loader {
+        margin: 0 auto;
+        width: 110px;
+        height: 110px;
+        border: 8px solid;
+        border-color: #00BDD3 #00BDD3 transparent ;
+        border-radius: 50%;
+        animation: spin 1.3s infinite;
+    }
+    .usersHeader {
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        .usersHeading {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 40px;
+            margin: 0 0 50px;
+        }
+    }
+    .usersCards {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 16px;
+        margin: 0px 32px;
+        .card {
+            text-align: center;
+            background-color: #fff;
+            max-width: 370px;
+            min-width: 282px;
+            height: 254px;
+            border-radius: 16px;
+            padding: 20px;
+            margin-right: 29px;
+            margin-bottom: 29px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            .cardHeader {
+                margin-bottom: 20px;
+                .userImg {
+                    margin-bottom: 20px;
+                    line-height: 26px;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                }
+
+            }
+        }
+    }
+    .usersBottom {
+        text-align: center;
+        padding-top: 21px;
+        .usersBtn {
+            width: 120px;
+            height: 34px;
+            background-color:#FFE302;
+            color: rgba(0, 0, 0, 0.87);
+            border: none;
+            border-radius: 80px;
+            font-size: 16px;
+            line-height: 26px;
+            padding: 4px 18px;
+            &:hover {
+                background-color: #F4E041;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 2560px)  {
+    .usersWrapper {
+        .usersCards {
+            .card {
+                width: 370px;
+            }
+        }
+    }
+}
+@media (min-width: 1024px)  {
+    .usersWrapper {
+        .usersCards {
+            .card {
+                width: 282px;
+            }
+        }
+    }
+}
+@media (min-width: 760px)  {
+    .usersWrapper {
+        .usersCards {
+            .card {
+                width: 344px;
+                max-width: 344px;
+                margin-right: 16px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

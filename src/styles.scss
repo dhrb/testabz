@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+    font-family: 'Nunito', sans-serif;
+}
+
+.appWrapper {
+    .appHeader {
+        background-color: #fff;
+    }
+    .appBody {
+        .welcome{
+            background-image: url('./assets/img/background.jpeg');
+            background-repeat: no-repeat;
+            width: 100%;
+            background-position: 40% 73%;
+            display: flex;
+            justify-content: center;
+        }
+        .users {
+            margin: 140px 0px;
+        }
+        .registration {
+            font-style: normal;
+            font-weight: 400;
+            margin: 140px 60px 100px;
+        }
+    }
+}
+
+@media (max-width: 360px) { 
+    .appHeader {
+        padding: 13px 16px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+    .appWrapper {
+        .appHeader {
+            padding: 13px 32px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .appWrapper {
+        .appHeader {
+            padding: 13px 60px;
+        }
+    }
+}
+
+@media (min-width: 1785px) and (max-width: 3840px) {
+    .appWrapper {
+        width: 100%;
+        padding: 0 695px;
+        margin: 0 auto;
+        max-width: 1170px;
+        .appHeader {
+            padding: 13px 0;
+        }
+        .appBody {
+        }
+    }
+}

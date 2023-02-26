@@ -1,0 +1,45 @@
+.welcomeWrapp {
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .welcomeMain {
+        width: 50%;
+        .welcomeHeader {
+            font-size: 40px;
+            line-height: 40px;
+            margin: 0 0 21px 0;
+        }
+        .welcomeParagraph {
+            font-size: 100%;
+            line-height: 26px;
+            margin: 0;
+        }
+        .welcomeBtn {
+            margin-top: 32px;
+            height: 34px;
+            background-color:#FFE302;
+            border: none;
+            border-radius: 80px;
+            font-size: 16px;
+            line-height: 26px;
+            padding: 4px 22px;
+            &:hover {
+                background-color: #F4E041;
+            }
+        }
+    }
+}
+
+@media ((min-width: 320px) and (max-width: 600px)) {
+    .welcomeWrapp {
+        .welcomeMain {
+            width: 80vw;
+        }
+    }
+}
