@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import Card from './Card/Card';
 import './usersStyles.scss';
 
@@ -36,7 +37,10 @@ function Users({users, loading}) {
             }
           </div>
           <div className='usersBottom'>
-            <button className='usersBtn'>
+            <button 
+              className='usersBtn'
+              onClick={null}
+            >
               Show more
             </button>
           </div>

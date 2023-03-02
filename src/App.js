@@ -54,7 +54,6 @@ function App() {
       try {
         const resData = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/token');
         setToken(resData.data.token);
-        console.log(resData.data.token)
       } catch (error) {
         console.error('Positions loading ERROR ' + error.message);
       }
@@ -63,6 +62,7 @@ function App() {
     getPositions();
     getToken();
   }, [])
+
   return (
     <div className="appWrapper">
       <header className="appHeader">
@@ -76,6 +76,7 @@ function App() {
           <Users 
             loading = {loading}
             users={users}
+            setUsers={setUsers}
           />
         </div>
         <div className='registration'>
