@@ -1,142 +1,142 @@
 .registrationWrapper {
+    text-align: center;
+    margin: 0 auto;
     .hasUploaded {
-        text-align: center;
         .succesParagraph {
             font-style: normal;
             font-weight: 400;
             font-size: 40px;
-            line-height: 40px;   
+            line-height: 40px;
         }
         .uploadedImg {
             max-width: 328px;
             width: 100%;
             max-height: 290px;
-
         }
-    } 
+    }
     .regHead {
-        text-align: center;
+        font-weight: 350;
     }
-    .inputUserData {
-        position: relative;
-        .regInput {
-            max-width: 381px;
-            width: 100%;
-            height: 54px;
-            margin: 0 auto;
-            margin-top: 50px;
-            display: block;
-            border: 1px solid #D0CFCF;
-            border-radius: 5px;
-            &[type=text] {
-                padding-left: 16px;
-            }
-
-            &::placeholder {
-                font-size: 16px;
-                color: #7E7E7E;
-            }
-        }
-        .regError {
-            border: 1px solid red;
-            max-width: 381px;
-            width: 100%;
-            height: 54px;
-            margin: 0 auto;
-            margin-top: 50px;
-            display: block;
-            border-radius: 5px;
-            &[type=text] {
-                padding-left: 16px;
-            }
-
-            &::placeholder {
-                font-size: 16px;
-                color: #7E7E7E;
-            }
-        }
-        .phoneTemplate {
-            position: absolute;
-            left: 35%;
-            margin-top: 4px;
-            font-size: 12px;
-            line-height: 14px;
-            font-weight: 400;
-            color:#7E7E7E;
-        }
-    }
-    .radioBtns {
-        margin-top: 43px;            
-        text-align: center;
-        position: relative;
-        right: 12%;
-        .radioBtnsList {
-            margin-top: 11px;
-            list-style-type: none;
-            display: inline-block;
-
-            .radioCheckImg {
-                padding-right: 10px;
-            }
-            .radioBtnsItem {
-                padding-top: 7px;
-                display: flex;
-                align-items: center;
-                justify-content: left;
-            }
-        }
-    }
-    .registrationBottom {
-        text-align: center;
-        margin-top: 47px;
-        .getFile {
-            display: flex;
-            justify-content: center;
-
-            .getFileInput {
-                display: none;
-            }
-            .uploadSpan {
-                width: 82px;
+    .registrationForm {
+        .inputUserData {
+            position: relative;
+            .regInput {
+                max-width: 381px;
+                width: 100%;
                 height: 54px;
+                margin: 0 auto;
+                margin-top: 50px;
+                display: block;
+                border: 1px solid #d0cfcf;
+                border-radius: 5px;
+                &[type='text'] {
+                    padding-left: 16px;
+                }
+
+                &::placeholder {
+                    font-size: 16px;
+                    color: #7e7e7e;
+                }
+            }
+            .regError {
+                border: 1px solid red;
+                max-width: 381px;
+                width: 100%;
+                height: 54px;
+                margin: 0 auto;
+                margin-top: 50px;
+                display: block;
+                border-radius: 5px;
+                &[type='text'] {
+                    padding-left: 16px;
+                }
+
+                &::placeholder {
+                    font-size: 16px;
+                    color: #7e7e7e;
+                }
+            }
+            .phoneTemplate {
+                position: absolute;
+                left: 35%;
+                margin-top: 4px;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 400;
+                color: #7e7e7e;
+            }
+        }
+        .radioBtns {
+            border: 1px solid black;
+            margin: 0 auto;
+            .radioBtnsList {
+                list-style-type: none;
+                display: block;
+
+                justify-content: center;
+                .radioCheckImg {
+                    margin-right: 12px;
+                }
+                .radioBtnsItem {
+                    margin-top: 7px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                }
+            }
+        }
+        .registrationBottom {
+            text-align: center;
+            margin-top: 47px;
+            .getFile {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                border: 1px solid black;
-                border-radius: 5px 0 0 5px;
-            }
-            .fileWayInput {
-                display: flex;
-                align-items: center;
-                padding-left: 16px;
-                width: 280px;
-                height: 54px;
-                border: 1px solid #D0CFCF;
-                border-left: none;
-                border-radius: 0px 5px 5px 0px;
-                color: #7E7E7E;
-            }
-        }
-        .regBtnBlock {
-            text-align: center;
-            .regBtn {
-                margin-top: 54px ;
-                margin-top: 32px;
-                height: 34px;
-                background-color:#FFE302;
-                border: none;
-                border-radius: 80px;
-                font-size: 16px;
-                line-height: 26px;
-                padding: 4px 22px;
-                &:hover {
-                    background-color: #F4E041;
-                    cursor: pointer;
+
+                .getFileInput {
+                    display: none;
                 }
-                &[disabled]{
-                    background-color: #B4B4B4;
-                    color: #FFFFFF;
-                  }
+                .uploadSpan {
+                    width: 82px;
+                    height: 54px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid black;
+                    border-radius: 5px 0 0 5px;
+                }
+                .fileWayInput {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 16px;
+                    width: 280px;
+                    height: 54px;
+                    border: 1px solid #d0cfcf;
+                    border-left: none;
+                    border-radius: 0px 5px 5px 0px;
+                    color: #7e7e7e;
+                }
+            }
+            .regBtnBlock {
+                text-align: center;
+                .regBtn {
+                    margin-top: 54px;
+                    margin-top: 32px;
+                    height: 34px;
+                    background-color: #ffe302;
+                    border: none;
+                    border-radius: 80px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    padding: 4px 22px;
+                    &:hover {
+                        background-color: #f4e041;
+                        cursor: pointer;
+                    }
+                    &[disabled] {
+                        background-color: #b4b4b4;
+                        color: #ffffff;
+                    }
+                }
             }
         }
     }
