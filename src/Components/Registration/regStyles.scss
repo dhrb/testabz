@@ -1,10 +1,11 @@
 .registrationWrapper {
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
+    max-width: 380px;
     .hasUploaded {
         .succesParagraph {
             font-style: normal;
-            font-weight: 400;
+            font-weight: 300;
             font-size: 40px;
             line-height: 40px;
         }
@@ -15,11 +16,14 @@
         }
     }
     .regHead {
-        font-weight: 350;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
     }
     .registrationForm {
         .inputUserData {
-            position: relative;
+            text-align: left;
             .regInput {
                 max-width: 381px;
                 width: 100%;
@@ -57,9 +61,8 @@
                 }
             }
             .phoneTemplate {
-                position: absolute;
-                left: 35%;
-                margin-top: 4px;
+                position: relative;
+                margin: 4px 0 0 16px;
                 font-size: 12px;
                 line-height: 14px;
                 font-weight: 400;
@@ -67,12 +70,14 @@
             }
         }
         .radioBtns {
-            border: 1px solid black;
-            margin: 0 auto;
+            margin: 25px auto 47px;
+            .selectRadioParagraph {
+                margin: 0 0 11px;
+            }
             .radioBtnsList {
                 list-style-type: none;
                 display: block;
-
+                padding: 0;
                 justify-content: center;
                 .radioCheckImg {
                     margin-right: 12px;
@@ -124,6 +129,7 @@
                     height: 34px;
                     background-color: #ffe302;
                     border: none;
+                    width: 100px;
                     border-radius: 80px;
                     font-size: 16px;
                     line-height: 26px;

@@ -1,14 +1,14 @@
 @font-face {
-    font-family: 'Nunito';
-    src: url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+    font-family: 'Nunito Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F8F8F8;
-    font-family: 'Nunito', sans-serif;
+    background-color: #f8f8f8;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .appWrapper {
@@ -16,11 +16,12 @@ body {
         background-color: #fff;
     }
     .appBody {
-        .welcome{
-            background-image: url('./assets/img/backgroundImg.jpeg');
-            background-repeat: no-repeat;
+        .welcome {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('./assets/img/backgroundImg.jpeg') no-repeat;
+            background-position: 50% 77%;
             width: 100%;
-            background-position: 40% 73%;
+            background-size: 250%;
             display: flex;
             justify-content: center;
         }
@@ -29,13 +30,12 @@ body {
         }
         .registration {
             font-style: normal;
-            font-weight: 400;
             margin: 140px 60px 100px;
         }
     }
 }
 
-@media (max-width: 360px) { 
+@media (max-width: 360px) {
     .appHeader {
         padding: 13px 16px;
     }
@@ -65,8 +65,6 @@ body {
         max-width: 1170px;
         .appHeader {
             padding: 13px 0;
-        }
-        .appBody {
         }
     }
 }

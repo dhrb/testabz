@@ -1,77 +1,80 @@
 .usersWrapper {
-    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+
     .loader {
-        margin: 0 auto;
         width: 110px;
         height: 110px;
         border: 8px solid;
-        border-color: #00BDD3 #00BDD3 transparent ;
+        border-color: #00bdd3 #00bdd3 transparent;
         border-radius: 50%;
         animation: spin 1.3s infinite;
     }
     .usersHeader {
         text-align: center;
-        font-style: normal;
-        font-weight: 400;
+
         .usersHeading {
             font-size: 40px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 40px;
-            margin: 0 0 50px;
+            margin-bottom: 50px;
         }
     }
     .usersCards {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
-        font-size: 16px;
-        margin: 0px 32px;
+        font-weight: 400;
+        margin: 0 auto;
+
         .card {
             text-align: center;
             background-color: #fff;
             max-width: 370px;
             min-width: 282px;
-            height: 254px;
             border-radius: 16px;
             padding: 20px;
             margin-right: 29px;
-            margin-bottom: 29px;
+            margin-bottom: 16px;
             overflow: hidden;
             text-overflow: ellipsis;
             font-size: 16px;
             .cardHeader {
-                margin-bottom: 20px;
+                line-height: 26px;
                 .userImg {
-                    margin-bottom: 20px;
                     line-height: 26px;
                     width: 70px;
                     height: 70px;
                     border-radius: 50%;
                 }
-
+            }
+            .cardBottom {
+                .userCardInfo {
+                    font-size: 16px;
+                }
             }
         }
     }
     .usersBottom {
         text-align: center;
-        padding-top: 21px;
+        margin-top: 54px;
         .usersBtn {
             width: 120px;
+            padding: 0;
             height: 34px;
-            background-color:#FFE302;
+            background-color: #ffe302;
             color: rgba(0, 0, 0, 0.87);
             border: none;
             border-radius: 80px;
             font-size: 16px;
             line-height: 26px;
-            padding: 4px 18px;
             &:hover {
-                background-color: #F4E041;
+                background-color: #f4e041;
                 cursor: pointer;
             }
         }
-
     }
 }
 
@@ -84,7 +87,7 @@
     }
 }
 
-@media (min-width: 2560px)  {
+@media ((min-width: 1600px) and (max-width: 2560px)) {
     .usersWrapper {
         .usersCards {
             .card {
@@ -93,7 +96,7 @@
         }
     }
 }
-@media (min-width: 1024px)  {
+@media (min-width: 1024px) {
     .usersWrapper {
         .usersCards {
             .card {
@@ -102,13 +105,25 @@
         }
     }
 }
-@media (min-width: 760px)  {
+@media (min-width: 760px) {
     .usersWrapper {
         .usersCards {
             .card {
                 width: 344px;
                 max-width: 344px;
                 margin-right: 16px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .usersWrapper {
+        .usersCards {
+            .card {
+                width: 344px;
+                max-width: 344px;
+                margin-right: 0px;
                 margin-bottom: 16px;
             }
         }

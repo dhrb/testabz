@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import './regStyles.scss'
 import axios from 'axios'
-
+import PropTypes from 'prop-types'
 import radioChecked from './../../assets/img/radioChecked.svg'
 import radioUnchecked from './../../assets/img/radioUnchecked.svg'
 import uploadedImg from './../../assets/img/succesImg.svg'
 
 function Registration({ positions, token }) {
-    //validation & state savers
+    Registration.propTypes = {
+        positions: PropTypes.array,
+        token: PropTypes.string
+    }
     const [firstName, setFirstName] = useState('')
     const [firstNameError, setFirstNameError] = useState(false)
     const [email, setEmail] = useState('')
@@ -15,23 +18,22 @@ function Registration({ positions, token }) {
     const [phone, setPhone] = useState()
     const [phoneError, setPhoneError] = useState(false)
     const [file, setFile] = useState()
-    const [fileError, setFileError] = useState(false)
+    const [fileError] = useState(false)
     const [position, setPosition] = useState()
     const [uploaded, setUploaded] = useState(false)
     const [valid, setValid] = useState(false)
 
     useEffect(() => {
-        if (firstNameError || emailError || phoneError === true) {
+        if (firstNameError && emailError && phoneError === true) {
             setValid(true)
         } else {
             setValid(false)
         }
     }, [firstNameError, emailError, phoneError])
-    //email handler
     const emailHandler = (e) => {
         setEmail(e.target.value)
         const re =
-            /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/gm
+            '/^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/gm'
         if (!re.test(String(e.target.value).toLowerCase())) {
             setEmailError(true)
         } else {
@@ -41,11 +43,9 @@ function Registration({ positions, token }) {
     //inputs handlers
     const firstNameHandler = (e) => {
         setFirstName(e.target.value)
-        if (e.target.value.length > 1) {
-            setFirstNameError(false)
-        } else {
+        if (e.target.value.length < 2) {
             setFirstNameError(true)
-        }
+        } else setFirstNameError(false)
     }
     const phoneHandeler = (e) => {
         setPhone(e.target.value)
@@ -55,9 +55,6 @@ function Registration({ positions, token }) {
             setPhoneError(false)
         }
     }
-
-    //prepare data to post req.
-
     const getUserData = async () => {
         let data = new FormData()
         data.append('name', firstName)
@@ -177,7 +174,7 @@ function Registration({ positions, token }) {
                             <button
                                 className="regBtn"
                                 onClick={getUserData}
-                                disabled={valid}
+                                disabled={valid ? true : false}
                             >
                                 Sign up
                             </button>

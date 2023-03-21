@@ -10,6 +10,7 @@
     justify-content: center;
     .welcomeMain {
         width: 50%;
+        font-weight: 300;
         .welcomeHeader {
             font-size: 40px;
             line-height: 40px;
@@ -31,6 +32,7 @@
             padding: 4px 22px;
             &:hover {
                 background-color: #f4e041;
+                cursor: pointer;
             }
         }
     }
